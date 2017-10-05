@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 2.8.8)
 
-ICMAKER_SET(icl_googletest)
+ICMAKER_SET(gtest)
 ICMAKER_BUILD_ANNOUNCEMENT()
 
 include(ExternalProject)
@@ -33,5 +33,5 @@ ExternalProject_Get_Property(googletest binary_dir)
 set(GTEST_LIBS_DIR ${binary_dir}/googlemock/gtest)
 
 # To be used by other modules
-SET(ICL_GOOGLETEST_INCLUDE_DIRS "${source_dir}/googletest/include" CACHE INTERNAL "")
-SET(ICL_GOOGLETEST_LIBRARIES "${GTEST_LIBS_DIR}/libgtest.a;${GTEST_LIBS_DIR}/libgtest_main.a" CACHE INTERNAL "")
+SET(GTEST_INCLUDE_DIRS "${source_dir}/googletest/include" CACHE INTERNAL "")
+SET(GTEST_LIBRARIES "${GTEST_LIBS_DIR}/libgtest.a;${GTEST_LIBS_DIR}/libgtest_main.a" CACHE INTERNAL "")
